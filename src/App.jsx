@@ -1,8 +1,8 @@
-import TiltedCard from './components/TiltedCard';
+import TiltedCard from "./components/tiltedCard";
 import Navbar from "./components/navbar";
-import ExpertiseTimeline from "./components/TimelineItem";
-import LiveProjects from "./components/LiveProjects";
-
+import ExpertiseTimeline from "./components/timeLineItem";
+import LiveProjects from "./components/liveProjects";
+import TechStack from "./components/techstack";
 
 function App() {
   return (
@@ -63,8 +63,12 @@ function App() {
         <ExpertiseTimeline />
 
         {/* ================= PROJECTS ================= */}
-        <section className="max-w-6xl mx-auto px-6 py-24">
+        <section className="max-w-6xl mx-auto px-6 py-24" id="live-projects">
           <LiveProjects />
+        </section>
+
+        <section id="tech-stack">
+          <TechStack />
         </section>
 
         {/* ================= CTA SECTION ================= */}
