@@ -47,6 +47,12 @@
   object-fit: contain;
 }
 
+/* Hide logo if empty src */
+.sm-logo-img[src=""],
+.sm-logo-img:not([src]) {
+  display: none;
+}
+
 .sm-toggle {
   position: relative;
   display: inline-flex;
@@ -55,20 +61,21 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #e9e9ef;
+  color: #94a3b8;
   font-weight: 500;
   line-height: 1;
   overflow: visible;
+  transition: color 0.3s ease;
+}
+
+.sm-toggle:hover {
+  color: #22d3ee;
 }
 
 .sm-toggle:focus-visible {
-  outline: 2px solid #ffffffaa;
+  outline: 2px solid #22d3eeaa;
   outline-offset: 4px;
   border-radius: 4px;
-}
-
-.sm-line:last-of-type {
-  margin-top: 6px;
 }
 
 .sm-toggle-textWrap {
@@ -132,7 +139,7 @@
   right: 0;
   width: clamp(260px, 38vw, 420px);
   height: 100%;
-  background: white;
+  background: #0b1120;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
@@ -141,11 +148,14 @@
   overflow-y: auto;
   z-index: 10;
   pointer-events: auto;
+  border-left: 1px solid rgba(34, 211, 238, 0.1);
 }
 
 [data-position='left'] .staggered-menu-panel {
   right: auto;
   left: 0;
+  border-left: none;
+  border-right: 1px solid rgba(34, 211, 238, 0.1);
 }
 
 .sm-prelayers {
@@ -191,7 +201,7 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--sm-accent, #ff0000);
+  color: #22d3ee;
 }
 
 .sm-socials-list {
@@ -218,7 +228,7 @@
 }
 
 .sm-socials-link:focus-visible {
-  outline: 2px solid var(--sm-accent, #ff0000);
+  outline: 2px solid #22d3ee;
   outline-offset: 3px;
 }
 
@@ -233,18 +243,16 @@
 .sm-socials-link {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #111;
+  color: #94a3b8;
   text-decoration: none;
   position: relative;
   padding: 2px 0;
   display: inline-block;
-  transition:
-    color 0.3s ease,
-    opacity 0.3s ease;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .sm-socials-link:hover {
-  color: var(--sm-accent, #ff0000);
+  color: #22d3ee;
 }
 
 .sm-panel-title {
@@ -266,37 +274,17 @@
 
 .sm-panel-item {
   position: relative;
-  color: #000;
+  color: #f1f5f9;
   font-weight: 600;
   font-size: 3.5rem;
   cursor: pointer;
   line-height: 1;
   letter-spacing: -2px;
   text-transform: uppercase;
-  transition:
-    background 0.25s,
-    color 0.25s;
+  transition: color 0.25s;
   display: inline-block;
   text-decoration: none;
   padding-right: 1.4em;
-}
-
-.staggered-menu-panel .sm-socials-list .sm-socials-link {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.staggered-menu-panel .sm-socials-list:hover .sm-socials-link:not(:hover) {
-  opacity: 0.35;
-}
-
-.staggered-menu-panel .sm-socials-list:focus-within .sm-socials-link:not(:focus-visible) {
-  opacity: 0.35;
-}
-
-.staggered-menu-panel .sm-socials-list .sm-socials-link:hover,
-.staggered-menu-panel .sm-socials-list .sm-socials-link:focus-visible {
-  opacity: 1;
 }
 
 .sm-panel-itemLabel {
@@ -306,7 +294,8 @@
 }
 
 .sm-panel-item:hover {
-  color: var(--sm-accent, #5227ff);
+  color: #22d3ee;
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
 }
 
 .sm-panel-list[data-numbering] {
@@ -321,11 +310,26 @@
   right: 2.8em;
   font-size: 18px;
   font-weight: 400;
-  color: var(--sm-accent, #5227ff);
+  color: #22d3ee;
   letter-spacing: 0;
   pointer-events: none;
   user-select: none;
   opacity: var(--sm-num-opacity, 0);
+}
+
+/* Dark scrollbar */
+.staggered-menu-panel::-webkit-scrollbar {
+  width: 6px;
+}
+.staggered-menu-panel::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.5);
+}
+.staggered-menu-panel::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.3);
+  border-radius: 3px;
+}
+.staggered-menu-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.6);
 }
 
 @media (max-width: 1024px) {
@@ -334,9 +338,18 @@
     left: 0;
     right: 0;
   }
-
   .staggered-menu-wrapper[data-open] .sm-logo-img {
     filter: invert(100%);
+  }
+  /* Ensure fixed wrapper has full viewport height on mobile and higher z-index than navbar */
+  .staggered-menu-wrapper.fixed-wrapper {
+    height: 100vh;
+    width: 100vw;
+    z-index: 60;
+  }
+  /* Ensure toggle button is visible on mobile */
+  .sm-toggle {
+    display: inline-flex !important;
   }
 }
 
@@ -346,8 +359,7 @@
     left: 0;
     right: 0;
   }
-
-  .staggered-menu-wrapper[data-open] .sm-logo-img {
-    filter: invert(100%);
+  .sm-panel-item {
+    font-size: 2.5rem;
   }
 }

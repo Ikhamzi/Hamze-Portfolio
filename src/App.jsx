@@ -1,7 +1,8 @@
 import TiltedCard from './components/TiltedCard';
-import profileImg from "./assets/hamzi.jpeg";
 import Navbar from "./components/navbar";
 import ExpertiseTimeline from "./components/TimelineItem";
+import LiveProjects from "./components/LiveProjects";
+
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
               <div className="relative">
                 <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full"></div>
                 <TiltedCard
-                  image={profileImg}
+                  image
                   containerWidth={300}
                   containerHeight={400}
                   imageWidth={300}
@@ -63,17 +64,17 @@ function App() {
 
         {/* ================= PROJECTS ================= */}
         <section className="max-w-6xl mx-auto px-6 py-24">
-          <liveProjects />
+          <LiveProjects />
         </section>
 
         {/* ================= CTA SECTION ================= */}
         <section className="py-24 text-center bg-linear-to-r from-cyan-500/10 to-blue-600/10">
           <h3 className="text-4xl font-bold mb-6">
-            Let’s Build Something Amazing Together
+            Let's Build Something Amazing Together
           </h3>
 
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Whether you’re a startup, business owner, or entrepreneur — I can
+            Whether you're a startup, business owner, or entrepreneur — I can
             help turn your idea into a powerful digital product.
           </p>
 
