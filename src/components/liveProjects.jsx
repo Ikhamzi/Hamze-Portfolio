@@ -8,7 +8,7 @@ export default function LiveProjects() {
       name: "LifeOS AI",
       link: "http://lifeosai.vercel.app",
       desc: "Deploys from GitHub",
-      image: "/images/lifeos.png",
+      image: "../assets/lifeosai.png",
       tech: ["React", "Node.js", "AI/ML", "Tailwind"],
     },
     {
@@ -20,7 +20,7 @@ export default function LiveProjects() {
     },
     {
       name: "Digital Leaf Solutions",
-      link: "https://digitalleafsolutions.netlify.app/",
+      link: "https://digital-leaf-solutions.netlify.app/",
       desc: "Deploys from GitHub",
       image: "/images/digitalleaf.png",
       tech: ["React", "Node.js", "MongoDB", "Express"],
