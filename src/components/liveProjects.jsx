@@ -1,4 +1,8 @@
 import { useState } from "react";
+import lifeosai from "../assets/lifeosai.png";
+import haus from "../assets/cafe.png";
+import digitalleaf from "../assets/digleaf.png";
+import realestate from "../assets/realestate.png";
 
 export default function LiveProjects() {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -7,30 +11,30 @@ export default function LiveProjects() {
     {
       name: "LifeOS AI",
       link: "http://lifeosai.vercel.app",
-      desc: "Deploys from GitHub",
-      image: "../assets/lifeosai.png",
-      tech: ["React", "Node.js", "AI/ML", "Tailwind"],
+      desc: "Deployed using vercel and render",
+      image: lifeosai,
+      tech: ["React", "Node", "Tailwind", "AI/ML"],
     },
     {
       name: "8th Haus Cafe",
       link: "https://8th-haus-cafe.netlify.app",
-      desc: "Deploys from GitHub",
-      image: "/images/8thhaus.png",
-      tech: ["React", "Firebase", "CSS3", "Netlify"],
+      desc: "Deployed from Netlify",
+      image: haus,
+      tech: ["React", "Node", "Tailwind", "MongoDB", "Express"],
     },
     {
       name: "Digital Leaf Solutions",
       link: "https://digital-leaf-solutions.netlify.app/",
-      desc: "Deploys from GitHub",
-      image: "/images/digitalleaf.png",
-      tech: ["React", "Node.js", "MongoDB", "Express"],
+      desc: "Deployed from Netlify",
+      image: digitalleaf,
+      tech: ["React", "Node", "Tailwind", "MongoDB", "Express"],
     },
     {
       name: "Real Estate Platform",
       link: "https://realestate.netlify.app/",
-      desc: "Manual Deploy",
-      image: "/images/realestate.png",
-      tech: ["React", "Redux", "Node.js", "PostgreSQL"],
+      desc: "Deployed from Netlify",
+      image: realestate,
+      tech: ["React", "Tailwind", "Node"],
     },
   ];
 
@@ -68,18 +72,43 @@ export default function LiveProjects() {
             <div className="relative flex flex-col md:flex-row items-stretch p-4 md:p-6 gap-6">
               {/* Thumbnail */}
               <div className="w-full md:w-56 h-40 md:h-28 rounded-xl overflow-hidden bg-white/5 relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* 1. Enhanced Gradient Overlay: Added a multi-color blend and backdrop blur for depth */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] z-10"></div>
+
+                {/* 2. Subtle Inner Border Glow: Adds a premium feel on hover */}
+                <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10 group-hover:ring-cyan-400/30 transition-all duration-500 z-20 pointer-events-none"></div>
+
                 {project.image ? (
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    // Added brightness and a smoother scale for a more professional feel
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-110 transition-all duration-700 ease-out"
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-gray-500">
-                    <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
+                  // 3. Enhanced Fallback State: Added a subtle grid pattern and a glowing icon
+                  <div className="w-full h-full flex flex-col items-center justify-center text-gray-500 relative z-10">
+                    {/* Subtle background pattern for the empty state */}
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 to-transparent opacity-50"></div>
+
+                    <div className="relative group/icon">
+                      <svg
+                        className="w-12 h-12 text-gray-600 group-hover/icon:text-cyan-400 group-hover/icon:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)] transition-all duration-300"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                    <span className="mt-2 text-xs font-medium tracking-wider text-gray-600 uppercase group-hover:text-gray-400 transition-colors">
+                      No Preview
+                    </span>
                   </div>
                 )}
               </div>
@@ -108,13 +137,20 @@ export default function LiveProjects() {
               <div className="hidden md:flex items-center justify-center w-12">
                 <svg
                   className={`w-6 h-6 text-cyan-400 transform transition-transform duration-300 ${
-                    hoveredProject === index ? "translate-x-1 -translate-y-1" : ""
+                    hoveredProject === index
+                      ? "translate-x-1 -translate-y-1"
+                      : ""
                   }`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
                 </svg>
               </div>
             </div>
@@ -137,17 +173,49 @@ export default function LiveProjects() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {[
             { name: "React", icon: "⚛️", color: "from-cyan-400 to-blue-500" },
-            { name: "Node.js", icon: "🟢", color: "from-green-400 to-green-600" },
-            { name: "MongoDB", icon: "🍃", color: "from-green-400 to-emerald-600" },
-            { name: "PostgreSQL", icon: "🐘", color: "from-blue-400 to-blue-600" },
-            { name: "Tailwind", icon: "💨", color: "from-cyan-400 to-teal-500" },
-            { name: "Framer", icon: "✨", color: "from-purple-400 to-pink-500" },
-            { name: "JavaScript", icon: "📜", color: "from-yellow-400 to-yellow-600" },
-            { name: "TypeScript", icon: "🔷", color: "from-blue-400 to-blue-600" },
+            {
+              name: "Node.js",
+              icon: "🟢",
+              color: "from-green-400 to-green-600",
+            },
+            {
+              name: "MongoDB",
+              icon: "🍃",
+              color: "from-green-400 to-emerald-600",
+            },
+            {
+              name: "PostgreSQL",
+              icon: "🐘",
+              color: "from-blue-400 to-blue-600",
+            },
+            {
+              name: "Tailwind",
+              icon: "💨",
+              color: "from-cyan-400 to-teal-500",
+            },
+            {
+              name: "Framer",
+              icon: "✨",
+              color: "from-purple-400 to-pink-500",
+            },
+            {
+              name: "JavaScript",
+              icon: "📜",
+              color: "from-yellow-400 to-yellow-600",
+            },
+            {
+              name: "TypeScript",
+              icon: "🔷",
+              color: "from-blue-400 to-blue-600",
+            },
             { name: "Git", icon: "📦", color: "from-orange-400 to-red-500" },
             { name: "Vercel", icon: "▲", color: "from-black to-gray-600" },
             { name: "Netlify", icon: "🌐", color: "from-cyan-400 to-blue-600" },
-            { name: "Firebase", icon: "🔥", color: "from-yellow-400 to-orange-500" },
+            {
+              name: "Firebase",
+              icon: "🔥",
+              color: "from-yellow-400 to-orange-500",
+            },
           ].map((tech) => (
             <div
               key={tech.name}
@@ -159,7 +227,9 @@ export default function LiveProjects() {
                   {tech.name}
                 </span>
               </div>
-              <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+              <div
+                className={`absolute inset-0 rounded-xl bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+              ></div>
             </div>
           ))}
         </div>
