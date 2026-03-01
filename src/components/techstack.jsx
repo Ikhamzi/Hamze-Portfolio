@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function techStack() {
+export default function TechStack() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
       <div className="text-center mb-16">
