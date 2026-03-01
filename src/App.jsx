@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import ExpertiseTimeline from "./components/TimelineItem";
 import LiveProjects from "./components/LiveProjects";
 import TechStack from "./components/TechStack";
+import WhatsCooking from "./components/WhatsCooking";
 
 function App() {
   return (
@@ -59,6 +60,8 @@ function App() {
             </div>
           </div>
         </section>
+                
+        <WhatsCooking />
 
         <ExpertiseTimeline />
 
