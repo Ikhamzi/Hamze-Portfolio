@@ -1,3 +1,4 @@
+import TiltedCard from './components/TiltedCard';
 import profileImg from "./assets/hamzi.jpeg";
 import Navbar from "./components/navbar";
 import ExpertiseTimeline from "./components/TimelineItem";
@@ -46,63 +47,23 @@ function App() {
             <div className="flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full"></div>
-                <img
-                  src={profileImg}
-                  alt="Hamza"
-                  className="relative w-72 h-[440px] object-cover rounded-3xl border border-white/10 shadow-2xl"
+                <TiltedCard
+                  image={profileImg}
+                  containerWidth={300}
+                  containerHeight={400}
+                  imageWidth={300}
+                  imageHeight={400}
                 />
               </div>
             </div>
           </div>
         </section>
 
-        <ExpertiseTimeline/>
+        <ExpertiseTimeline />
 
         {/* ================= PROJECTS ================= */}
-        <section className="max-w-7xl mx-auto px-6 py-24">
-          <h3 className="text-4xl font-bold mb-14 text-center">
-            Featured Projects
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            {[
-              {
-                name: "LifeOS AI",
-                link: "http://lifeosai.vercel.app",
-                desc: "AI productivity platform with modern UX and automation features.",
-              },
-              {
-                name: "8th Haus Cafe",
-                link: "https://8th-haus-cafe.netlify.app",
-                desc: "Restaurant website with modern layout, branding & business UI.",
-              },
-              {
-                name: "Digital Leaf Solutions",
-                link: "https://digitalleafsolutions.netlify.app/",
-                desc: "Corporate landing page built for digital service branding.",
-              },
-              {
-                name: "Real Estate Platform",
-                link: "https://realestate.netlify.app/",
-                desc: "Modern property listing UI with clean and scalable structure.",
-              },
-            ].map((project) => (
-              <a
-                key={project.name}
-                href={project.link}
-                target="_blank"
-                className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400 transition overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-linear-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-
-                <h4 className="text-2xl font-semibold mb-4 group-hover:text-cyan-400 transition">
-                  {project.name}
-                </h4>
-
-                <p className="text-gray-400">{project.desc}</p>
-              </a>
-            ))}
-          </div>
+        <section className="max-w-6xl mx-auto px-6 py-24">
+          <liveProjects />
         </section>
 
         {/* ================= CTA SECTION ================= */}
