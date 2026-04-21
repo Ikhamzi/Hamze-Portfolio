@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  // base: './',  // Reverted: was breaking local dev assets
 
   plugins: [react(), tailwindcss()],
 })

@@ -8,19 +8,19 @@ import Lanyard from "./components/Lanyard/Lanyard";
 import GlassIcons from "./components/GlassIcons/GlassIcons";
 import { listTools, listProyek } from "./data";
 import ChromaGrid from "./components/ChromaGrid/ChromaGrid";
-import ProjectModal from "./components/ProjectModal/ProjectModal"; // <-- IMPORT MODAL
+import ProjectModal from "./components/ProjectModal/ProjectModal";
 import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
 import ChatRoom from "./components/ChatRoom";
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css';
+
 AOS.init();
 
 function App() {
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  const [selectedProject, setSelectedProject] = useState(null); // null = modal tertutup
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
@@ -29,18 +29,8 @@ function App() {
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
-  // -------------------------
 
-  useEffect(() => {
-    const isReload =
-      performance.getEntriesByType("navigation")[0]?.type === "reload";
-
-    if (isReload) {
-      // Ambil path tanpa hash
-      const baseUrl = window.location.origin + "/portofolio/";
-      window.location.replace(baseUrl);
-    }
-  }, []);
+  // Removed redirect useEffect to fix local crash (infinite reload loop)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -79,21 +69,20 @@ function App() {
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-<ShinyText text="Hi I'm Hamza Junaid" disabled={false} speed={3} className='custom-class' /> 
+              <ShinyText text="Hi I'm Hamza Junaid" disabled={false} speed={3} className='custom-class' />
             </h1>
             <BlurText
-text="Full-Stack MERN Developer crafting high-performance, scalable, and visually stunning web applications using modern technologies."
+              text="Full-Stack MERN Developer crafting high-performance, scalable, and visually stunning web applications using modern technologies."
               delay={150}
               animateBy="words"
               direction="top"
-              className=" mb-6" 
+              className=" mb-6"
             />
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
-href="./assets/CV.pdf" download="CV.pdf" 
-
+                href="./assets/CV.pdf" 
+                download="CV.pdf"
                 className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
-
               >
                 <ShinyText text="Download CV" disabled={false} speed={3} className="custom-class" />
               </a>
@@ -106,7 +95,7 @@ href="./assets/CV.pdf" download="CV.pdf"
           </div>
           <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
-name="Hamza Junaid"
+              name="Hamza Junaid"
               title="Full-Stack MERN Developer"
               handle="hamzijunaid"
               status="Online"
@@ -119,22 +108,22 @@ name="Hamza Junaid"
             />
           </div>
         </div>
-        {/* tentang */}
+        {/* about */}
         <div className="mt-15 mx-auto w-full max-w-[1600px] rounded-3xl border-[5px] border-violet-500/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-6" id="about">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10 pt-0 px-8" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
             <div className="basis-full md:basis-7/12 pr-0 md:pr-8 border-b md:border-b-0 md:border-r border-violet-500/30">
-              {/* Kolom kiri */}
+              {/* Left column */}
               <div className="flex-1 text-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
                   About Me
                 </h2>
 
                 <BlurText
-text="I’m Hamza Junaid, a Full-Stack MERN Developer passionate about building modern, high-performance web applications with intuitive user experience. I specialize in React, Node.js, MongoDB, Tailwind CSS, and AI/ML integrations, deploying scalable solutions on Vercel, Netlify, and Render. With 4+ years of experience and 20+ projects, I'm dedicated to delivering impactful digital products using the MERN stack and beyond."
+                  text="I'm Hamza Junaid, a Full-Stack MERN Developer passionate about building modern, high-performance web applications with intuitive user experience. I specialize in React, Node.js, MongoDB, Tailwind CSS, and AI/ML integrations, deploying scalable solutions on Vercel, Netlify, and Render. With 4+ years of experience and 20+ projects, I'm dedicated to delivering impactful digital products using the MERN stack and beyond."
                   delay={150}
                   animateBy="words"
                   direction="top"
-                  className="text-base md:text-lg leading-relaxed mb-10 text-gray-300" 
+                  className="text-base md:text-lg leading-relaxed mb-10 text-gray-300"
                 />
 
                 <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-8 sm:gap-y-0 mb-4 w-full">
@@ -158,7 +147,6 @@ text="I’m Hamza Junaid, a Full-Stack MERN Developer passionate about building 
                   </div>
                 </div>
 
-
                 <ShinyText
                   text="Working with heart, creating with mind."
                   disabled={false}
@@ -168,7 +156,7 @@ text="I’m Hamza Junaid, a Full-Stack MERN Developer passionate about building 
               </div>
             </div>
 
-            {/* Kolom kanan */}
+            {/* Right column */}
             <div className="basis-full md:basis-5/12 pl-0 md:pl-8 overflow-hidden max-w-full flex justify-center ">
               <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
             </div>
@@ -176,8 +164,8 @@ text="I’m Hamza Junaid, a Full-Stack MERN Developer passionate about building 
 
         </div>
         <div className="tools mt-32">
-          <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" >Tools & Technologies</h1>
-          <p className="w-2/5 text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">My Profesional Skills</p>
+          <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Tools & Technologies</h1>
+          <p className="w-2/5 text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">My Professional Skills</p>
           <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
 
             {listTools.map((tool) => (
@@ -205,9 +193,8 @@ text="I’m Hamza Junaid, a Full-Stack MERN Developer passionate about building 
             ))}
           </div>
         </div>
-        {/* tentang */}
 
-        {/* Proyek */}
+        {/* Projects */}
         <div className="proyek mt-32 py-10" id="project" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"></div>
         <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Project</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Showcasing a selection of projects that reflect my skills, creativity, and passion for building meaningful digital experiences.</p>
@@ -216,7 +203,7 @@ text="I’m Hamza Junaid, a Full-Stack MERN Developer passionate about building 
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
             <ChromaGrid
               items={listProyek}
-              onItemClick={handleProjectClick} // Kirim fungsi untuk handle klik
+              onItemClick={handleProjectClick}
               radius={500}
               damping={0.45}
               fadeOut={0.6}
@@ -224,10 +211,8 @@ text="I’m Hamza Junaid, a Full-Stack MERN Developer passionate about building 
             />
           </div>
         </div>
-        {/* Proyek */}
 
-
-        {/* Kontak */}
+        {/* Contact */}
         <div className="kontak mt-32 sm:p-10 p-0" id="contact">
           <h1
             className="text-4xl mb-2 font-bold text-center"
@@ -247,17 +232,14 @@ text="I’m Hamza Junaid, a Full-Stack MERN Developer passionate about building 
             Get in touch with me or chat in real-time
           </p>
 
-          {/* Container dua kolom */}
           <div className="flex flex-col md:flex-row gap-8">
-            {/* Chat Room di kiri */}
             <div className="flex-1 bg-zinc-800 p-6 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">
               <ChatRoom />
             </div>
 
-            {/* Contact Form di kanan */}
             <div className="flex-1">
               <form
-action="https://formsubmit.co/hamza.junaid2002@gmail.com" 
+                action="https://formsubmit.co/hamza.junaid2002@gmail.com"
                 method="POST"
                 className="bg-zinc-800 p-10 w-full rounded-md"
                 autoComplete="off"
@@ -312,7 +294,6 @@ action="https://formsubmit.co/hamza.junaid2002@gmail.com"
             </div>
           </div>
         </div>
-        {/* Kontak */}
       </main>
 
       <ProjectModal
@@ -324,4 +305,5 @@ action="https://formsubmit.co/hamza.junaid2002@gmail.com"
   )
 }
 
-export default App
+export default App;
+

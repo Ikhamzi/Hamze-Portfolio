@@ -23,11 +23,11 @@ import Tools17 from "/assets/tools/php.png";
 import Tools18 from "/assets/tools/vite.png";
 import Tools19 from "/assets/tools/mysql.png";
 
-import project1 from "../public/assets/project/proyek1.png";
-import project2 from "../public/assets/project/proyek2.png";
-import project3 from "../public/assets/project/proyek3.png";
-import project4 from "../public/assets/project/proyek4.png";
-import project5 from "../public/assets/project/proyek4.png";
+import project1 from "/assets/project/proyek1.png?url";
+import project2 from "/assets/project/proyek2.png?url";
+import project3 from "/assets/project/proyek3.png?url";
+import project4 from "/assets/project/proyek4.png?url";
+import project5 from "/assets/project/proyek4.png?url";
 
 export const listTools = [
   {
