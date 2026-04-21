@@ -1,16 +1,61 @@
-# React + Vite
+# Portofolio Web — [Faris Edrik P / rissss21]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Selamat datang di portofolio web pribadi saya! 🌐  
+Dibuat dengan React + Vite, ini adalah showcase dari project, skill, dan karya yang ingin saya bagikan.
 
-Currently, two official plugins are available:
+##  Struktur Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `public/` — file statis (favicon, assets, dsb.)  
+- `src/` — code utama React (komponen, utilitas, dsb.)  
+- `index.html` — entry point halaman web  
+- `package.json` & `package-lock.json` — manajemen dependencies dan script  
+- `vite.config.js` — konfigurasi build dan dev server Vite  
+- `eslint.config.js` — aturan linting agar kodenya tetap bersih dan konsisten  
 
-## React Compiler
+##  Fitur Utama
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Dibangun dengan **React + Vite** — ringan, cepat reload, dan performa build optimal  
+- **ESLint** telah terkonfigurasi agar coding style tetap rapi  
+- Struktur modular dan siap dikembangkan—bisa ditambahkan halaman “About”, “Projects”, dsb.
 
-## Expanding the ESLint configuration
+##  Cara Jalankan
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone repository ini:
+```bash
+git clone https://github.com/rissss21/portofolio.git
+cd portofolio
+````
+
+2. Install dependencies:
+```bash
+npm install
+````
+
+3. Jalankan server lokal dengan hot reload:
+```bash
+npm run dev
+````
+
+4. Buat versi production:
+```bash
+npm run build
+````
+
+## &#x20;Quick Preview
+
+Jika sudah di-deploy (contoh: GitHub Pages, Netlify, Vercel), kamu bisa tambahkan link deploy di sini, misalnya:
+[🔗 Lihat versi live](https://username.github.io/portofolio/)
+
+## Tentang Saya
+
+Hai, saya Faris Edrik P (username GitHub: `rissss21`).
+Saya seorang Developer yang suka bikin aplikasi web ringan dengan tampilan modern dan performa tinggi. Scroll aja di project saya, dan jangan sungkan untuk reach out kalau ada pertanyaan!
+
+* **Email:** [email\_farisedrik21@gmail.com](mailto:email_farisedrik21@gmail.com)
+* **LinkedIn:** [linkedin.com/in/farisedp](https://www.linkedin.com/in/farisedp/)
+* **Instagram:** @farisedrikprayoga
+
+---
+
+
+[1]: https://github.com/rissss21/portofolio "GitHub - rissss21/portofolio"
