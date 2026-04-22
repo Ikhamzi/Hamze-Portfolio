@@ -3,7 +3,7 @@
 [![Portfolio](https://hamza-portfoli0.netlify.app/)](https://hamza-portfoli0.netlify.app/) [![GitHub](https://img.shields.io/badge/GitHub-HamziJunaid-black?logo=github)](https://github.com/hamzi)
 
 ## 🚀 About Me
-Full-Stack MERN Developer with **4+ years of experience** specializing in high-performance web applications, scalable architectures, and AI/ML integrations. **GPA 4.0/4.0**. Passionate about automation, modern React patterns, Node.js backends, and delivering production-ready solutions deployed on Vercel, Netlify, and Render.
+Full-Stack MERN Developer with **1+ years of experience** specializing in high-performance web applications, scalable architectures, and AI/ML integrations. **GPA 7.8/8.0**. Passionate about automation, modern React patterns, Node.js backends, and delivering production-ready solutions deployed on Vercel, Netlify, and Render.
 
 **Core Expertise:**
 - **Frontend**: React, Next.js, TypeScript, Tailwind CSS, Vite
