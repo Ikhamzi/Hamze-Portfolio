@@ -1,61 +1,67 @@
-# Portofolio Web — [Faris Edrik P / rissss21]
+# Hamza Junaid - Senior MERN Stack & Automation Developer
 
-Selamat datang di portofolio web pribadi saya! 🌐  
-Dibuat dengan React + Vite, ini adalah showcase dari project, skill, dan karya yang ingin saya bagikan.
+[![Portfolio](https://hamza-portfoli0.netlify.app/)](https://hamza-portfoli0.netlify.app/) [![GitHub](https://img.shields.io/badge/GitHub-HamziJunaid-black?logo=github)](https://github.com/hamzi)
 
-##  Struktur Project
+## 🚀 About Me
+Full-Stack MERN Developer with **4+ years of experience** specializing in high-performance web applications, scalable architectures, and AI/ML integrations. **GPA 4.0/4.0**. Passionate about automation, modern React patterns, Node.js backends, and delivering production-ready solutions deployed on Vercel, Netlify, and Render.
 
-- `public/` — file statis (favicon, assets, dsb.)  
-- `src/` — code utama React (komponen, utilitas, dsb.)  
-- `index.html` — entry point halaman web  
-- `package.json` & `package-lock.json` — manajemen dependencies dan script  
-- `vite.config.js` — konfigurasi build dan dev server Vite  
-- `eslint.config.js` — aturan linting agar kodenya tetap bersih dan konsisten  
+**Core Expertise:**
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS, Vite
+- **Backend**: Node.js, Express, MongoDB, PostgreSQL, Firebase
+- **Automation & DevOps**: Git/GitHub, Vercel, Netlify, Render, CI/CD pipelines
+- **AI/ML & Tools**: AI integrations, Figma, VS Code, Kotlin (mobile)
+- **20+ Projects** shipped to production
 
-##  Fitur Utama
+## ✨ Featured Projects
 
-- Dibangun dengan **React + Vite** — ringan, cepat reload, dan performa build optimal  
-- **ESLint** telah terkonfigurasi agar coding style tetap rapi  
-- Struktur modular dan siap dikembangkan—bisa ditambahkan halaman “About”, “Projects”, dsb.
+### [LifeOS AI](http://lifeosai.vercel.app) - **AI-Powered Life Management Platform**
+- Intelligent task scheduling, prioritization, and seamless integrations
+- Tech: React, Node.js, Tailwind, AI/ML algorithms
+- **Deployed**: Vercel + Render
 
-##  Cara Jalankan
+### [8th Haus Cafe](https://8th-haus-cafe.netlify.app) - **Full E-Commerce Coffee Shop**
+- Menu browsing, online ordering, responsive design
+- Tech: React, Node, MongoDB, Express, Tailwind
+- **Deployed**: Netlify
 
-1. Clone repository ini:
-```bash
-git clone https://github.com/rissss21/portofolio.git
-cd portofolio
-````
+### [Digital Leaf Solutions](https://digital-leaf-solutions.netlify.app) - **Digital Agency Showcase**
+- Scalable web platform with modern animations
+- Tech: React, Node, Tailwind, MongoDB
+- **Deployed**: Netlify
 
-2. Install dependencies:
-```bash
-npm install
-````
+### [Real Estate Platform](https://realestate.netlify.app) - **Property Marketplace**
+- Listings, search, user interactions with robust backend
+- Tech: React, Node.js, Tailwind
+- **Deployed**: Netlify
 
-3. Jalankan server lokal dengan hot reload:
-```bash
-npm run dev
-````
+### [Aether AI](https://github.com/hamzi/aether-ai) - **AI Trip Planner**
+- Personalized itineraries, task scheduling, email automation
+- Tech: React, Node, AI/ML, Email APIs
+- **Source**: GitHub
 
-4. Buat versi production:
-```bash
-npm run build
-````
+## 🛠 Tech Stack
+```
+Frontend: React · Next.js · TypeScript · Tailwind CSS · Vite · HTML/CSS/JS
+Backend: Node.js · Express · MongoDB · PostgreSQL · Firebase
+Tools: VS Code · Git/GitHub · Figma · AI/ML · Kotlin · Bootstrap
+Deployment: Vercel · Netlify · Render
+```
 
-## &#x20;Quick Preview
 
-Jika sudah di-deploy (contoh: GitHub Pages, Netlify, Vercel), kamu bisa tambahkan link deploy di sini, misalnya:
-[🔗 Lihat versi live](https://username.github.io/portofolio/)
+## 📈 Performance
+- **Vite + React**: Lightning-fast HMR & optimized builds
+- **Tailwind CSS**: Zero-runtime utility-first styling
+- **AOS Animations**: Smooth scroll-triggered effects
+- **Responsive**: Mobile-first design across all devices
 
-## Tentang Saya
+## 📞 Contact
+- **Email**: hamza.junaid2002@gmail.com
+- **Live Demo**: [hamza-portfoli0.netlify.app](https://hamza-portfoli0.netlify.app)
+- **Download CV**: [CV.pdf](https://hamza-portfoli0.netlify.app/assets/CV.pdf)
 
-Hai, saya Faris Edrik P (username GitHub: `rissss21`).
-Saya seorang Developer yang suka bikin aplikasi web ringan dengan tampilan modern dan performa tinggi. Scroll aja di project saya, dan jangan sungkan untuk reach out kalau ada pertanyaan!
-
-* **Email:** [email\_farisedrik21@gmail.com](mailto:email_farisedrik21@gmail.com)
-* **LinkedIn:** [linkedin.com/in/farisedp](https://www.linkedin.com/in/farisedp/)
-* **Instagram:** @farisedrikprayoga
+**Open to collaborations on MERN projects, automation workflows, and AI integrations.**
 
 ---
 
+⭐ **Star this repo if you like modern React portfolios!**
 
-[1]: https://github.com/rissss21/portofolio "GitHub - rissss21/portofolio"
