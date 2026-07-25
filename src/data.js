@@ -27,7 +27,7 @@ import project1 from "/assets/project/proyek1.png?url";
 import project2 from "/assets/project/proyek2.png?url";
 import project3 from "/assets/project/proyek3.png?url";
 import project4 from "/assets/project/proyek4.png?url";
-import project5 from "/assets/project/proyek4.png?url";
+import project5 from "/assets/project/proyek5.png?url";
 
 export const listTools = [
   {
@@ -135,11 +135,12 @@ export const listProyek = [
     id: 1,
     image: project1,
     title: "LifeOS AI",
-    subtitle: "Deployed using Vercel and Render",
-    fullDescription: "LifeOS AI is a sophisticated AI-powered life management platform designed to streamline daily tasks and enhance productivity. Featuring intelligent scheduling, task prioritization, and seamless integrations, it represents the pinnacle of modern AI-driven personal management tools. Built with React, Node, Tailwind, and AI/ML technologies.",
+    subtitle: "Full Stack App — Live: https://lifeosai.vercel.app",
+    fullDescription: "Designed and developed a productivity-focused web application with AI-assisted workflows to help users manage tasks, notes, and personal organization efficiently. Built a responsive, mobile-first interface ensuring seamless performance across desktop, tablet, and mobile devices. Implemented MongoDB as the primary database to provide a scalable, flexible, and high-performance data storage solution for the application. Deployed the frontend on Vercel and backend services on Render, optimizing performance, scalability, and real-world production reliability.",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "http://lifeosai.vercel.app",
+    url: "https://lifeosai.vercel.app",
+    sourceCode: "https://github.com/Ikhamzi/Life-OS-AI",
     dad: "100",
   },
   {
@@ -151,6 +152,7 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://8th-haus-cafe.netlify.app",
+    sourceCode: "https://github.com/Ikhamzi/8th-Haus-Cafe",
     dad: "200",
   },
   {
@@ -162,28 +164,31 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://digital-leaf-solutions.netlify.app/",
+    sourceCode: "https://github.com/Ikhamzi/Builddigitalleafwebsite",
     dad: "300",
   },
   {
     id: 4,
     image: project4,
     title: "Real Estate Platform",
-    subtitle: "Deployed from Netlify",
+    subtitle: "No live deployment available",
     fullDescription: "A comprehensive real estate platform enabling property listings, search functionality, and user interactions. Designed with modern UI/UX principles and robust backend capabilities for real-world deployment. Built with React, Tailwind, and Node.js.",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://realestate.netlify.app/",
+    url: "https://real-estate-pro2.netlify.app/",
+    sourceCode: "https://github.com/Ikhamzi/Alpha-Realty-Copy-",
     dad: "400",
   },
   {
     id: 5,
     image: project5,
-    title: "Aether AI",
-    subtitle: "AI-powered trip planner with task scheduling and email itinerary",
-    fullDescription: "Aether is an intelligent AI assistant for seamless trip planning. It generates personalized itineraries, intelligently schedules tasks and activities, and automatically sends detailed email itineraries upon user request. Leveraging advanced AI algorithms for optimal travel experiences. Built with React, Node, AI/ML, and Email API integrations.",
-    borderColor: "#EF4444",
-    gradient: "linear-gradient(145deg, #EF4444, #000)",
-    url: "https://github.com/hamzi/aether-ai",
+    title: "QMet",
+    subtitle: "Client Website (Frontend/UI-UX) — Live: https://qmet.onrender.com",
+    fullDescription: "Designed and developed the UI/UX for a client website per their brand and design requirements. Built a responsive, accessible frontend using Next.js and Tailwind CSS. Developed ready to integrate backend API endpoints with Node.js/Express.js and PostgreSQL for data storage. Deployed the application on Render for client review and production use.",
+    borderColor: "#3B82F6",
+    gradient: "linear-gradient(145deg, #3B82F6, #000)",
+    url: "https://qmet.onrender.com",
+    sourceCode: "https://github.com/Ikhamzi/QMet",
     dad: "500",
   },
 ];

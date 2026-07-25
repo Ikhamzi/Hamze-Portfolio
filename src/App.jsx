@@ -22,6 +22,10 @@ function App() {
 
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Contact form state — filled either by the user typing directly,
+  // or by ChatRoom's guided Q&A flow via onFillForm
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+
   const handleProjectClick = (project) => {
     setSelectedProject(project);
   };
@@ -129,19 +133,19 @@ function App() {
                 <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-8 sm:gap-y-0 mb-4 w-full">
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      20<span className="text-violet-500">+</span>
+                      5<span className="text-violet-500">+</span>
                     </h1>
-                    <p>Project Finished</p>
+                    <p>Projects Finished</p>
                   </div>
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      4<span className="text-violet-500">+</span>
+                      1<span className="text-violet-500">+</span>
                     </h1>
-                    <p>Years of Experience</p> 
+                    <p>Year of Experience</p> 
                   </div>
                   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      4.0<span className="text-violet-500">/4.0</span>
+                      4.0<span className="text-violet-500">/5.0</span>
                     </h1>
                     <p>GPA</p> 
                   </div>
@@ -196,7 +200,7 @@ function App() {
 
         {/* Projects */}
         <div className="proyek mt-32 py-10" id="project" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"></div>
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Project</h1>
+        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Projects</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Showcasing a selection of projects that reflect my skills, creativity, and passion for building meaningful digital experiences.</p>
         <div className="proyek-box mt-14" >
 
@@ -234,7 +238,7 @@ function App() {
 
           <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-1 bg-zinc-800 p-6 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">
-              <ChatRoom />
+              <ChatRoom onFillForm={(data) => setFormData(data)} />
             </div>
 
             <div className="flex-1">
@@ -256,6 +260,8 @@ function App() {
                       name="Name"
                       placeholder="Input Name..."
                       className="border border-zinc-500 p-2 rounded-md"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
                     />
                   </div>
@@ -266,6 +272,8 @@ function App() {
                       name="Email"
                       placeholder="Input Email..."
                       className="border border-zinc-500 p-2 rounded-md"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
                     />
                   </div>
@@ -278,6 +286,8 @@ function App() {
                       rows="7"
                       placeholder="Message..."
                       className="border border-zinc-500 p-2 rounded-md"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       required
                     ></textarea>
                   </div>
@@ -306,4 +316,3 @@ function App() {
 }
 
 export default App;
-
