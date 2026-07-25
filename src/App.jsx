@@ -73,7 +73,7 @@ function App() {
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <ShinyText text="Hi I'm Hamza Junaid" disabled={false} speed={3} className='custom-class' />
+              <ShinyText text="Hi, I'm Hamza" disabled={false} speed={3} className='custom-class' />
             </h1>
             <BlurText
               text="Full-Stack MERN Developer crafting high-performance, scalable, and visually stunning web applications using modern technologies."
